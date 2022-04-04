@@ -74,7 +74,6 @@ function makeFakeUsers() {
         company: company,
       })
     } else if (i >= 71 && i <= 99) {
-      // from ids 71-99 444444444 routing number
       const routingNumber = 444444444
       const company = "Tech D"
       fakeUsers.push({
