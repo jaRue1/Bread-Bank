@@ -84,7 +84,7 @@ console.log(users)
 
 // .find() a user that has an id that matches the your birthday date i.e (21)
 
-// .map() all of the users and output firstName's of the users
+// .map() all of the users and output just their firstNames
 
 // .filter() out all users with an id greater than 30 but less 45 (31 to 44)
 
