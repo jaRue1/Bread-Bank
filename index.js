@@ -9,6 +9,11 @@ function makeFakeUsers() {
     let firstName = faker.name.firstName()
     let lastName = faker.name.lastName()
     let jobTitle = faker.name.jobTitle()
+    let state = faker.address.state()
+    let city = faker.address.city()
+    let zipCode = faker.address.zipCode("#####")
+    let streetAddress = faker.address.streetAddress(true)
+    let country = faker.address.country()
     let phoneNumber = faker.phone.phoneNumber()
     let accountNumber = faker.finance.account(12) // give a random 12 digit account #
     let balance = Number(faker.finance.amount(100, 1000000, 2))
@@ -20,6 +25,11 @@ function makeFakeUsers() {
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        state: state,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: "USA",
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
@@ -34,6 +44,10 @@ function makeFakeUsers() {
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: country,
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
@@ -48,6 +62,11 @@ function makeFakeUsers() {
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        state: state,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: "USA",
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
@@ -62,37 +81,46 @@ function makeFakeUsers() {
         id: i,
         firstName: firstName,
         lastName: lastName,
-        company: company,
         jobTitle: jobTitle,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: country,
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
         routingNumber: routingNumber,
+        company: company,
       })
     }
   }
   return fakeUsers
 }
+
 let users = makeFakeUsers() // this becomes array of 100 objects
 
 console.log("All Users !!")
 console.log(users)
 
-// find a user that has an id that matches the your birthday date i.e (21)
+// BASICS - The following tasks have been given below to help you get
+// familiar with JS built in array methods. Try to solve these problems with the
+// corresponding array methods.
+
+// .find() a user that has an id that matches the your birthday date i.e (21)
 let findFakeUser = users.find((user) => {
   return user.id === 21
 })
 console.log("User # 21 !")
 console.log(findFakeUser)
 
-// list all of an array objects with the just the firstName's of the users
+/// .map() all of the users and output just their firstNames
 let fakeUsersFirstNames = users.map((user) => {
   return user.firstName
 })
 console.log("All User First Names !!")
 console.log(fakeUsersFirstNames)
 
-// filter out all users with an id greater than 30 but less 45 (31 to 44)
+// .filter() out all users with an id greater than 30 but less 45 (31 to 44)
 let chosenFakeUsers = users.filter((user) => {
   if (user.id > 30 && user.id < 45) {
     return user
@@ -101,7 +129,7 @@ let chosenFakeUsers = users.filter((user) => {
 console.log("The Chosen 15")
 console.log(chosenFakeUsers)
 
-// forEach() user in company TECH B print out there names in Alphabetical Order
+// .forEach() user in company TECH B print out there names in Alphabetical Order
 const companyUserNames = []
 function getNames() {
   users.forEach((user) => {
@@ -112,14 +140,25 @@ function getNames() {
 }
 getNames()
 console.log("Tech B Names !!")
-// sort() this array alphabetically
+
+// .sort() this array alphabetically
 companyUserNames.sort()
 for (const iterator of companyUserNames) {
   console.log(iterator) // print out each name
 }
 
-// get the top 5 earners in company Tech A and Tech B
+// shift
 
+// unshift()
+
+// pop()
+
+// reduce()
+
+// SALES DEPT - Chava from sales needs to know somethings before a meeting see if you can help him out.
+
+// Hey bud , could you get me the top 5 earners in company Tech A and company Tech B
+// ps - I just need their last name, job title, address, and phone number
 function getTopEarnersInCompany(users, company) {
   return [...users]
     .filter((user) => user.company === company)
@@ -136,10 +175,7 @@ const company2 = getTopEarnersInCompany(users, "Tech B")
 console.log("Company A Top Earners", company1)
 console.log("Company B Top Earners", company2)
 
-// shift
+// Hey bud , could you get me the average balance of users in company Tech C
 
-// unshift()
-
-// pop()
-
-// reduce()
+// Hey bud, could you get me all of the users in companies Tech A and Tech D that have a balance over 50,000
+// ps - I just need their last name, email and address
