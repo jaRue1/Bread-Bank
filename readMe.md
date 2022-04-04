@@ -28,9 +28,20 @@ Each will task increase in difficulty and will require you to leverage JavaScrip
 
 You can check to see if your output match's by checking out the answer branch. Try to think through problems before looking one version of the answer in the answer branch. You will realize in software there are many ways to solve the same problem.
 
+### Start Project Steps
+
+```
+1. clone repo
+2. npm i
+3. npm run execute
+4. start completing tasks !
+```
+
 ## Rules
 
-- No third party libraries
+- Follow the instructions
+
+* No third party libraries
 
 ## Helpful Links
 
@@ -43,3 +54,7 @@ You can check to see if your output match's by checking out the answer branch. T
 [stackoverflow.com](https://stackoverflow.com/)
 
 ps side note when using faker be sure to use node -v 11.5.0 and npm i faker@5.5.3 the latest version is unstable
+
+```
+Shout out to you for taking this challenge on. You can do it !
+```
