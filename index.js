@@ -9,6 +9,11 @@ function makeFakeUsers() {
     let firstName = faker.name.firstName()
     let lastName = faker.name.lastName()
     let jobTitle = faker.name.jobTitle()
+    let state = faker.address.state()
+    let city = faker.address.city()
+    let zipCode = faker.address.zipCode("#####")
+    let streetAddress = faker.address.streetAddress(true)
+    let country = faker.address.country()
     let phoneNumber = faker.phone.phoneNumber()
     let accountNumber = faker.finance.account(12) // give a random 12 digit account #
     let balance = Number(faker.finance.amount(100, 1000000, 2))
@@ -20,6 +25,11 @@ function makeFakeUsers() {
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        state: state,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: "USA",
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
@@ -34,6 +44,10 @@ function makeFakeUsers() {
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: country,
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
@@ -48,6 +62,11 @@ function makeFakeUsers() {
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        state: state,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: "USA",
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
@@ -62,12 +81,16 @@ function makeFakeUsers() {
         id: i,
         firstName: firstName,
         lastName: lastName,
-        company: company,
         jobTitle: jobTitle,
+        city: city,
+        zipCode: zipCode,
+        streetAddress: streetAddress,
+        country: country,
         phoneNumber: phoneNumber,
         accountNumber: accountNumber,
         currentBalance: balance,
         routingNumber: routingNumber,
+        company: company,
       })
     }
   }
