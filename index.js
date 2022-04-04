@@ -78,15 +78,21 @@ let users = makeFakeUsers() // this becomes array of 100 objects
 console.log("All Users !!")
 console.log(users)
 
-// find a user that has an id that matches the your birthday date i.e (21)
+// BASICS - The following tasks have been given below to help you get
+// familiar with JS built in array methods. Try to solve these problems with the
+// corresponding array methods.
 
-// list all of an array objects with the just the firstName's of the users
+// .find() a user that has an id that matches the your birthday date i.e (21)
 
-// filter out all users with an id greater than 30 but less 45 (31 to 44)
+// .map() all of the users and output firstName's of the users
 
-// forEach() user in company TECH B print out there names in Alphabetical Order
+// .filter() out all users with an id greater than 30 but less 45 (31 to 44)
 
-// sort() this array alphabetically
+// .forEach() user in company TECH B print out there names in Alphabetical Order
+
+// .sort() this array alphabetically
+
+// SALES DEPT - This is
 
 // get the top 5 earners in company Tech A and Tech B
 
