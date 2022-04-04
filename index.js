@@ -79,16 +79,62 @@ console.log("All Users !!")
 console.log(users)
 
 // find a user that has an id that matches the your birthday date i.e (21)
+let findFakeUser = users.find((user) => {
+  return user.id === 21
+})
+console.log("User # 21 !")
+console.log(findFakeUser)
 
 // list all of an array objects with the just the firstName's of the users
+let fakeUsersFirstNames = users.map((user) => {
+  return user.firstName
+})
+console.log("All User First Names !!")
+console.log(fakeUsersFirstNames)
 
 // filter out all users with an id greater than 30 but less 45 (31 to 44)
+let chosenFakeUsers = users.filter((user) => {
+  if (user.id > 30 && user.id < 45) {
+    return user
+  }
+})
+console.log("The Chosen 15")
+console.log(chosenFakeUsers)
 
 // forEach() user in company TECH B print out there names in Alphabetical Order
-
+const companyUserNames = []
+function getNames() {
+  users.forEach((user) => {
+    if (user.company == "Tech B")
+      // push()
+      companyUserNames.push(user.firstName + " " + user.lastName)
+  })
+}
+getNames()
+console.log("Tech B Names !!")
 // sort() this array alphabetically
+companyUserNames.sort()
+for (const iterator of companyUserNames) {
+  console.log(iterator) // print out each name
+}
 
 // get the top 5 earners in company Tech A and Tech B
+
+function getTopEarnersInCompany(users, company) {
+  return [...users]
+    .filter((user) => user.company === company)
+    .sort((a, b) => {
+      if (a.currentBalance < b.currentBalance) return -1
+      if (a.currentBalance > b.currentBalance) return 1
+      return 0
+    })
+    .slice(-5) // slice()
+}
+// find top earners within users array
+const company1 = getTopEarnersInCompany(users, "Tech A")
+const company2 = getTopEarnersInCompany(users, "Tech B")
+console.log("Company A Top Earners", company1)
+console.log("Company B Top Earners", company2)
 
 // shift
 
