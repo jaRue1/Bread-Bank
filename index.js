@@ -178,3 +178,9 @@ console.log("Company B Top Earners", company2)
 
 // Hey bud, could you get me all of the users in companies Tech A and Tech D that have a balance over 50,000
 // ps - I just need their last name, email and address
+
+// SALES DEPT - Chris is the Director of Sales and he needs your help.
+// Hey, bud can you build something that allows us to import new users into our system
+// I have a CSV of all the new customers but there is nothing here that allows us to import data in bulk.
+
+// navigate to data/newCustomers.csv
