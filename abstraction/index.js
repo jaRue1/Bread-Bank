@@ -1,7 +1,6 @@
+// create an abstraction that cleans up the setup within index.js
 const faker = require("faker")
 const { fa } = require("faker/lib/locales")
-
-// Lets make some fake users
 
 function makeFakeUsers() {
   let fakeUsers = []
@@ -95,39 +94,5 @@ function makeFakeUsers() {
   }
   return fakeUsers
 }
-let users = makeFakeUsers() // this becomes array of 100 objects
 
-console.log("All Users !!")
-console.log(users)
-
-// BASICS - The following tasks have been given below to help you get
-// familiar with JS built in array methods. Try to solve these problems with the
-// corresponding array methods.
-
-// .find() a user that has an id that matches the your birthday date i.e (21)
-
-// .map() all of the users and output just their firstNames
-
-// .filter() out all users with an id greater than 30 but less 45 (31 to 44)
-
-// .forEach() user in company TECH B print out there names in Alphabetical Order
-
-// .sort() this array alphabetically
-
-// shift
-
-// unshift()
-
-// pop()
-
-// reduce()
-
-// SALES DEPT - Chava from sales needs to know somethings before a meeting see if you can help him out.
-
-// Hey bud , could you get me the top 5 earners in company Tech A and company Tech B
-// ps - I just need their last name, job title, address, and phone number
-
-// Hey bud , could you get me the average balance of users in company Tech C
-
-// Hey bud, could you get me all of the users in companies Tech A and Tech D that have a balance over 50,000
-// ps - I just need their last name, email and address
+module.exports.makeFakeUsers = makeFakeUsers
