@@ -5,7 +5,7 @@ const users = userFactory.makeFakeUsers(); // this becomes array of 100 objects
 // ps - I just need their last name, email and address
 
 // get all the users from Tech A and Tech D
-// then get all the users with balance over 50000
+// then get all the users with balance over 900,000
 let output = users.filter((user) => {
   if (
     (user.company === "Tech A" || user.company === "Tech D") &&
