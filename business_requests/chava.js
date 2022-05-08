@@ -18,8 +18,6 @@ function getTopEarnersInCompany(users, company) {
 // find top earners within users array
 const company1 = getTopEarnersInCompany(users, "Tech A");
 const company2 = getTopEarnersInCompany(users, "Tech B");
-// console.log("Company A Top Earners", company1);
-// console.log("Company B Top Earners", company2);
 
 // display data -- last name, job title, address, and phone number
 if (company1.length !== 0) {
