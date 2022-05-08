@@ -4,17 +4,17 @@ const users = userFactory.makeFakeUsers(); // this becomes array of 100 objects
 // Hey bud , could you get me the average balance of users in company Tech C
 const company = "Tech C";
 // get all users in tech C
-const employees = users.filter((user) => {
+const filteredUsers = users.filter((user) => {
   if (user.company === company) {
     return user;
   }
 });
 
 let sum = 0;
-const count = employees.length;
+const count = filteredUsers.length;
 
 // sum up all the account balances
-employees.forEach((employee) => {
+filteredUsers.forEach((employee) => {
   sum = employee.currentBalance + sum;
 });
 
