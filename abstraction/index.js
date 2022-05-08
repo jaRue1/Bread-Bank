@@ -1,29 +1,31 @@
 // create an abstraction that cleans up the setup within index.js
-const faker = require("faker")
-const { fa } = require("faker/lib/locales")
+const faker = require("faker");
+const { fa } = require("faker/lib/locales");
 
 function makeFakeUsers() {
-  let fakeUsers = []
+  let fakeUsers = [];
   for (let i = 0; i < 100; i++) {
-    let firstName = faker.name.firstName()
-    let lastName = faker.name.lastName()
-    let jobTitle = faker.name.jobTitle()
-    let state = faker.address.state()
-    let city = faker.address.city()
-    let zipCode = faker.address.zipCode("#####")
-    let streetAddress = faker.address.streetAddress(true)
-    let country = faker.address.country()
-    let phoneNumber = faker.phone.phoneNumber()
-    let accountNumber = faker.finance.account(12) // give a random 12 digit account #
-    let balance = Number(faker.finance.amount(100, 1000000, 2))
+    let firstName = faker.name.firstName();
+    let lastName = faker.name.lastName();
+    let jobTitle = faker.name.jobTitle();
+    let state = faker.address.state();
+    let city = faker.address.city();
+    let zipCode = faker.address.zipCode("#####");
+    let streetAddress = faker.address.streetAddress(true);
+    let country = faker.address.country();
+    let phoneNumber = faker.phone.phoneNumber();
+    let accountNumber = faker.finance.account(12); // give a random 12 digit account #
+    let balance = Number(faker.finance.amount(100, 1000000, 2));
     if (i <= 20) {
-      const routingNumber = 111111111
-      const company = "Tech A"
+      const routingNumber = 111111111;
+      const company = "Tech A";
+      const domain = "@tech-A";
       fakeUsers.push({
         id: i,
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        email: lastName + domain + ".com",
         state: state,
         city: city,
         zipCode: zipCode,
@@ -34,15 +36,17 @@ function makeFakeUsers() {
         currentBalance: balance,
         routingNumber: routingNumber,
         company: company,
-      })
+      });
     } else if (i >= 21 && i <= 50) {
-      const routingNumber = 222222222
-      const company = "Tech B"
+      const routingNumber = 222222222;
+      const company = "Tech B";
+      const domain = "@tech-B";
       fakeUsers.push({
         id: i,
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        email: lastName + domain + ".com",
         city: city,
         zipCode: zipCode,
         streetAddress: streetAddress,
@@ -52,15 +56,17 @@ function makeFakeUsers() {
         currentBalance: balance,
         routingNumber: routingNumber,
         company: company,
-      })
+      });
     } else if (i >= 51 && i <= 70) {
-      const routingNumber = 333333333
-      const company = "Tech C"
+      const routingNumber = 333333333;
+      const company = "Tech C";
+      const domain = "@tech-C";
       fakeUsers.push({
         id: i,
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        email: lastName + domain + ".com",
         state: state,
         city: city,
         zipCode: zipCode,
@@ -71,15 +77,17 @@ function makeFakeUsers() {
         currentBalance: balance,
         routingNumber: routingNumber,
         company: company,
-      })
+      });
     } else if (i >= 71 && i <= 99) {
-      const routingNumber = 444444444
-      const company = "Tech D"
+      const routingNumber = 444444444;
+      const company = "Tech D";
+      const domain = "@tech-C";
       fakeUsers.push({
         id: i,
         firstName: firstName,
         lastName: lastName,
         jobTitle: jobTitle,
+        email: lastName + domain + ".com",
         city: city,
         zipCode: zipCode,
         streetAddress: streetAddress,
@@ -89,10 +97,10 @@ function makeFakeUsers() {
         currentBalance: balance,
         routingNumber: routingNumber,
         company: company,
-      })
+      });
     }
   }
-  return fakeUsers
+  return fakeUsers;
 }
 
-module.exports.makeFakeUsers = makeFakeUsers
+module.exports.makeFakeUsers = makeFakeUsers;
