@@ -22,3 +22,30 @@ const company2 = getTopEarnersInCompany(users, "Tech B");
 // console.log("Company B Top Earners", company2);
 
 // display data -- last name, job title, address, and phone number
+if (company1.length !== 0) {
+  console.log(company1.length + " users found in " + company1[0].company + "!");
+  for (const user of company1) {
+    console.log("-------------------------");
+    console.log("last name : " + user.lastName);
+    console.log("job title : " + user.jobTitle);
+    console.log("street address : " + user.streetAddress);
+    console.log("phone number : " + user.phoneNumber);
+    console.log("-------------------------");
+  }
+}
+console.log("");
+console.log("");
+console.log("");
+console.log("");
+
+if (company2.length !== 0) {
+  console.log(company2.length + " users found in " + company2[0].company + "!");
+  for (const user of company2) {
+    console.log("-------------------------");
+    console.log("last name : " + user.lastName);
+    console.log("job title : " + user.jobTitle);
+    console.log("street address : " + user.streetAddress);
+    console.log("phone number : " + user.phoneNumber);
+    console.log("-------------------------");
+  }
+}
